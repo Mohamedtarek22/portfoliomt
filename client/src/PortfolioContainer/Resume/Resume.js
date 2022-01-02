@@ -51,7 +51,7 @@ const Resume = (props) => {
 		{ label: "Work History", logoSrc: img2 },
 		{ label: "Programming Skills", logoSrc: img3 },
 		{ label: "Projects", logoSrc: img4 },
-		{ label: "Interests", logoSrc: img5 },
+		
 	];
 
 	const programmingSkillDetails = [
@@ -70,95 +70,113 @@ const Resume = (props) => {
 	];
 	const projectDetails = [
 		{
-			title: "Personal Portfolio Website",
+			title: (
+				<a href="https://portfoliomt.herokuapp.com/">
+					Personal Portfolio Website
+				</a>
+			),
 			duration: { fromDate: "2021", toDate: "persent" },
 			description:
 				"A Personal Portfolio website to showcase all my details and projects at one place",
-			subHeading: "Technologies Used:React Js , BootStrap , Node Js",
+			subHeading: "Technologies Used:React Js, BootStrap, Node Js",
 		},
 		{
-			title: "Sign Language Recognition",
+			title: (
+				<a href="https://graduatemymain1.gatsbyjs.io">
+					Sign Language Recognition
+				</a>
+			),
 			duration: { fromDate: "2020", toDate: "2021" },
-			description:
-				"Graduate Project: Created an Project that helps dumb and deaf people to be able to communicate more effectively to show this project From: https://graduatemymain1.gatsbyjs.io",
-			subHeading: "Technologies Used :React Js ,Tensorflow js , Gatsby",
+			description: (
+				<>
+					{" "}
+					<a>Graduate Project:</a>
+					<p>
+						helps dumb and deaf people to be able to communicate more
+						effectively.
+					</p>
+				</>
+			),
+
+			subHeading: "Technologies Used :React Js, Tensorflow js, Gatsby",
 		},
 		{
-			title: "Zerowaste",
+			title: <a href="http://zerowaste.otgcom.com/">Zerowaste</a>,
 			duration: { fromDate: "Aug-2021", toDate: "Sep-2021" },
-			description:
-				": Created an Project that helps zero waste society To Show this project From : http://zerowaste.otgcom.com/",
-			subHeading: "Technologies Used :HTML,CSS ,JAVASCRIPT ,DJANGO",
+			description: "A project that helps zero waste society",
+			subHeading: "Technologies Used :HTML, CSS, JAVASCRIPT, DJANGO",
 		},
 	];
 
 	const resumeDetails = [
 		<div className="resume-screen-container" key="education">
 			<ResumeHeading
-				heading={"University of Cairo"}
-				subHeading={"BACHELOR OF SCIENCE MAJOR:COMPUTER SCIENCE"}
+				heading={"Cairo University"}
+				subHeading={
+					<p>
+						BACHELOR OF SCIENCE
+						<br /> MAJOR: COMPUTER SCIENCE
+					</p>
+				}
 				fromDate={"2017"}
 				toDate={"2021"}
 			/>
-			
 		</div>,
 		<div className="resume-screen-container" key="work-experience">
 			<ResumeHeading
-				heading={"On Time Group "}
+				heading={"On Time Group"}
 				subHeading={"FULL STACK DEVEOPER"}
 				fromDate={"2021"}
 				toDate={"persent"}
 			/>
 			<div className="experience-description">
 				<span className="resume-description-text">
-					Currently Working as React ,php and django on websites
+					Technologies: React, PHP, and django
 				</span>
 			</div>
 			<div className="experience-description">
 				<span className="resume-description-text">
-					- Developed an ecommerce website for client with the dashbord for
-					managing for products , managing reviews ,users ,payment etc .
+					- Developed an E-commerce website with dashboard for managing
+					products, reviews, payment, and users.
 				</span>
 				<br />
 				<span className="resume-description-text">
-					- Developed an recycle website for client
+					- Developed a recycling website
 				</span>
 			</div>
-            </div>,
-			<div className="resume-screen-container programming-skills-container"
-				key="programming-skills"
-			>
-				{programmingSkillDetails.map((skill, index) => (
-					<div className="skill-parent" key={index}>
-						<div className="heading-bullet"></div>
-						<span>{skill.skill}</span>
-						<div className="skill-percentage">
-							<div
-								style={{ width: skill.ratingPercentage + "%" }}
-								className="active-percentage-bar"
-							></div>
-						</div>
+		</div>,
+		<div
+			className="resume-screen-container programming-skills-container"
+			key="programming-skills"
+		>
+			{programmingSkillDetails.map((skill, index) => (
+				<div className="skill-parent" key={index}>
+					<div className="heading-bullet"></div>
+					<span>{skill.skill}</span>
+					<div className="skill-percentage">
+						<div
+							style={{ width: skill.ratingPercentage + "%" }}
+							className="active-percentage-bar"
+						></div>
 					</div>
-				))}
-			</div>
-			,
-			<div className="resume-screen-container" key="projects">
-				{projectDetails.map((projectDetails, index) => (
-					<ResumeHeading
-						key={index}
-						heading={projectDetails.title}
-						subHeading={projectDetails.subHeading}
-						description={projectDetails.description}
-						fromDate={projectDetails.duration.fromDate}
-						toDate={projectDetails.duration.toDate}
-					/>
-				))}
-			</div>
-			,
-			<div className="resume-screen-container" key="interests">
-				<ResumeHeading heading="Football" description="I Love ALAhly Sports" />
-			</div>
-		
+				</div>
+			))}
+		</div>,
+		<div className="resume-screen-container" key="projects">
+			{projectDetails.map((projectDetails, index) => (
+				<ResumeHeading
+					key={index}
+					heading={projectDetails.title}
+					subHeading={projectDetails.subHeading}
+					description={projectDetails.description}
+					fromDate={projectDetails.duration.fromDate}
+					toDate={projectDetails.duration.toDate}
+				/>
+			))}
+		</div>,
+		// <div className="resume-screen-container" key="interests">
+		// 	<ResumeHeading heading="Football" description="I Love ALAhly Sports" />
+		// </div>,
 	];
 
 	const handleCarousal = (index) => {
