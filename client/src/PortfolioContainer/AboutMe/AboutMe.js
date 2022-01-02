@@ -11,14 +11,14 @@ const AboutMe = (props) => {
     const fadeInSubscription= ScrollService.currentScreenFadeIn.subscribe(fadeInscreenHandler)
     const SCREEN_CONTANTS = {
 			discription:
-				"I can develop web application from frontend to backend and api and write applications from java and python.",
+				"I develop web applications (frontend, backend, and api) using javascript and python.",
 			highlights: {
 				bullets: [
-					"Full Stack development",
-					"React Developer",
-					"Python && Django",
+					"Full Stack",
+					"React",
+					"Python & Django",
 				],
-				heading: "Here are a few highlights:",
+				heading: "Here are few highlights:",
 			},
 		};
     const renderHighlight =()=>{
@@ -34,7 +34,7 @@ const AboutMe = (props) => {
     return (
 			<div className="about-me-container screen-container" id={props.id || ""}>
 				<div className="about-me-parent">
-					<ScreenHeading title={"About Me"} subHeading={"Why Choose Me ?"} />
+					<ScreenHeading title={"About Me"} subHeading={"Why Choose Me?"} />
 					<div className="about-me-card">
 						<div className="about-me-profile"></div>
 						<div className="about-me-details">
@@ -52,8 +52,8 @@ const AboutMe = (props) => {
 									className="btn primary-btn"
 									onClick={() => ScrollService.scrollHandler.scrollToHireMe()}
 								>
-									{""}
-									Hire ME{" "}
+									
+									Hire ME
 								</button>
 								<a href="Resume_Mohamed_Tarek.pdf" download="MohamedTarek.pdf">
 									<button className="btn highlighted-btn"> Get Resume</button>
