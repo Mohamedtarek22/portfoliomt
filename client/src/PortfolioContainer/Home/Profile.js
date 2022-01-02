@@ -13,9 +13,6 @@ const Profile  = () => {
 								<a href="https://www.facebook.com/UAO2011">
 									<i className="fa fa-facebook-square"></i>
 								</a>
-								<a href="#">
-									<i className="fa fa-google-plus-square"></i>
-								</a>
 								<a href="https://www.instagram.com/mohamedtarek121/">
 									<i className="fa fa-instagram"></i>
 								</a>
@@ -26,7 +23,7 @@ const Profile  = () => {
 						</div>
 						<div className="profile-details-name">
 							<span className="primary-text">
-								{" "}
+								
 								Hi , I Am <span className="highlighted-text">MOhamedTarek</span>
 							</span>
 						</div>
@@ -38,20 +35,20 @@ const Profile  = () => {
 									<Typical
 										loop={Infinity}
 										steps={[
-											"Python&Django Developer 😍",
+											"Python & Django😍",
 											1000,
-											"Full Stack Developer 💻",
+											"Full Stack 💻",
 											1000,
-											"MERN Developer",
+											"MERN Stack ",
 											1000,
 
-											"React Developer",
+											"React",
 											1000,
 										]}
 									/>
 								</h1>
 								<span className="profile-role-tagline">
-									I am building applications with front and back end operations.
+									I build applications with front and back end operations.
 								</span>
 							</span>
 						</div>
