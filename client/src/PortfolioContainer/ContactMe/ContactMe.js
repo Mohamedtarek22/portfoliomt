@@ -62,18 +62,14 @@ const ContactMe = (props) => {
 
 	return (
 		<div className="main-container" id={props.id || ""}>
-			<ScreenHeading subHeading={"lets keep in Touch"} title={"Contact Me"} />
+			<ScreenHeading subHeading={"let's keep in Touch"} title={"Contact Me"} />
 			<div className="center-form">
 				<div className="col">
 					<h2 className="title">
-						
 						<Typical loop={Infinity} steps={["Get In Touch 😍", 1000]} />
 					</h2>
 					<a href="https://www.facebook.com/UAO2011">
 						<i className="fa fa-facebook-square"></i>
-					</a>
-					<a href="#">
-						<i className="fa fa-google-plus-square"></i>
 					</a>
 					<a href="https://www.instagram.com/mohamedtarek121/">
 						<i className="fa fa-instagram"></i>
@@ -89,7 +85,7 @@ const ContactMe = (props) => {
 					</div>
 					<form onSubmit={submitForm}>
 						<p>{banner}</p>
-						<br/>
+						<br />
 						<label htmlFor="name">Name</label>
 						<input type="text" onChange={handleName} value={name} />
 						<label htmlFor="email">Email</label>
