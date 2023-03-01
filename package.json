@@ -2,7 +2,7 @@
   "name": "mohamedtarek",
   "version": "1.0.0",
   "description": "portfoilo",
-  "main": "index.js",
+  "main": "/client/src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "nodemon server.js",
